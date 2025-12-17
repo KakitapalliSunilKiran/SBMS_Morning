@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.example.demo.model.Engine&apos; to &apos;DieselEngine&apos;&#x0D;&#x0A;- Original project: &apos;CarEngineComponentAnnotaion&apos;&#x0D;&#x0A;- Original element: &apos;com.example.demo.model.Engine&apos;&#x0D;&#x0A;- Renamed element: &apos;com.example.demo.model.DieselEngine&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Engine&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.demo.model{Engine.java[Engine" matchStrategy="1" name="DieselEngine" qualified="false" references="true" similarDeclarations="false" stamp="1764904245339" textual="false" version="1.0"/>
+</session>

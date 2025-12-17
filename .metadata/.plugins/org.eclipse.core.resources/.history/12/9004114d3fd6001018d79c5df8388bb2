@@ -1,0 +1,54 @@
+package com.example.threelayers.controller;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.threelayers.model.Student;
+import com.example.threelayers.service.BusinessLayer;
+
+@RestController
+public class Entrypoint {
+	
+	//There are 4 Http Methods 
+	//@GetMapping
+	//@PostMapping
+	//@PutMapping
+	//@deleteMapping
+	//localhost:8080/greet
+	
+	@Autowired
+	BusinessLayer businessLayer;
+	
+	@PostMapping("/store")
+	public void storeToDb(@RequestBody Student s) {
+		 businessLayer.storeToDb(s);
+	}
+	
+	@GetMapping("/fetch/{id}")
+	public Optional<Student> getStudent(@PathVariable("id") int id) {
+		return businessLayer.getStudent(id);
+	}
+	
+	@PutMapping("update/{id}/{clgName}")
+	public void updateStudent(@PathVariable("id") int id,@PathVariable("clgName") String clgName) {
+		businessLayer.updateStudent(id, clgName);
+	}
+	
+	
+	//DSA and System design
+	//Amazon Senior Technical role
+	//DSA 
+	//70 percent 
+	//System design 1.32 crore
+	
+	//@pathvariable @RequestParam
+	
+	
+}

@@ -1,0 +1,97 @@
+There are 4 scopes mainly 
+1. Singleton :
+
+   getSingletonObject
+    Singleton scope means only 1 bean created per IOC container
+    it follows the principle of Eager loading
+
+     <!-- <bean id="ref3" class="carapp.Car">
+     	<constructor-arg name="e" ref="ref1"></constructor-arg>
+     	<constructor-arg name="sb" ref="ref4"></constructor-arg>
+     </bean> -->
+     
+      <!-- <bean id="ref3" class="carapp.Car">
+     	<constructor-arg index="0" ref="ref1"></constructor-arg>
+     	<constructor-arg index="1" ref="ref4"></constructor-arg>
+     </bean>  -->
+     
+     <bean id="ref3" class="carapp.Car">
+     	<constructor-arg name="e" ref="ref1"></constructor-arg>
+     </bean>
+     
+     <bean id="ref5" class="carapp.Car">
+     	<constructor-arg name="e" ref="ref2"></constructor-arg>
+     </bean>
+     
+     
+2. Prototype:
+   beans will be created once they are required 
+   it follows the principle of lazy loading 
+
+   ApplicationContext ctx = 
+		        new ClassPathXmlApplicationContext("beans.xml");
+		DieselEngine de = ctx.getBean(DieselEngine.class);
+		System.out.println(de.hashCode());
+		DieselEngine de1 = ctx.getBean(DieselEngine.class);
+		System.out.println(de1.hashCode());
+		
+3. Request
+4. Session 
+   Three tier application
+============================================================
+DSA and System design 
+
+can you design a Singleton class using core java :
+
+class Singleton
+{
+    private static final Singleton st;
+
+     private Singleton(){
+
+     } 
+
+    static  Singleton getSingletonObject(){
+
+        Synchronized(this){
+            if(st==null){
+                st=new Singleton();
+                return st;
+             }
+        }
+        
+        return st;
+        ...
+        ...
+        ...
+
+    }
+}
+
+class Ecommerce
+{
+    int x;
+    String test;
+    Arraylist<> al
+
+    Ecommerce(){
+        this.x=x;
+        this.test=test;
+        this.al=new ArrayList<>(al) //shallow cloning 
+    }
+    //All the fields need to be private
+    //no setter methods
+    //for arraylist 
+}
+
+class Tester
+{
+    main(){
+        Ecommer obj=new Ecommerce(10,"sunil",al);
+
+        al.add(1000);
+    }
+}
+
+//How can i make this class as immutab;each
+//Single ton 

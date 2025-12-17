@@ -1,0 +1,25 @@
+1. Banner 
+    as part of the main method 
+    it will call run method
+    things happening internally :
+             * it will capture
+             * it will activate listners
+             * it will create IOC container
+             * It will start IOC container 
+             * Componenet Scanning and Bean Injection 
+             * printing the Banner
+             * starting the runner 
+2. Runner classe
+
+create the file banner.txt in resource package 
+Have the custom banner name 
+
+2 Functional Interfarce 
+
+CommandLine Runner
+Application Runner 
+
+useful for caching layer
+if you want to do any start up logic 
+
+start

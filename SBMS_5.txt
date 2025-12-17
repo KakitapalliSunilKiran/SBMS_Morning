@@ -1,0 +1,2 @@
+If there is a parametrized constructor already in the class JVM does 
+not create a default constructor automatically

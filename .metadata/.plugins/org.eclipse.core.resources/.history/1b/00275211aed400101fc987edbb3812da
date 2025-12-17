@@ -1,0 +1,10 @@
+package com.example.threelayers.service;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class BusinessLayer {
+     public String fetchRecord() {
+    	 return "Record fetched from Service layer";
+     }
+}

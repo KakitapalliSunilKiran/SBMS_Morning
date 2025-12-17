@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="ref1" class="carapp.DieselEngine"> 	 
+    </bean>
+    
+    <bean id="ref2" class="carapp.PetrolEngine"></bean>
+     <bean id="ref3" class="carapp.Car">
+     	<property name="e" ref="ref1"></property>
+     </bean>
+</beans>
+===============================================================
+Output:
+I am in default constructor : Bean creation phase
+I am in Serr method : Dependency Injection phase
+Engine failed please start again : We have called explicirtly
+==============================================================
+

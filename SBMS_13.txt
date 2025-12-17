@@ -1,0 +1,53 @@
+What are things happening as part of Run method:
+==============================================
+1. it is capturing the startup time 
+2. Activating listners
+3. Printing the banner
+4. preparing the IOC container
+5. starting the IOC container
+6. starting the runners
+==================================================
+
+@SpringBootApplication
+
+     -> @EnableAutoconfiguration
+         Tomcat server , no need register bean , beans.xml ,
+         no need do that explicitly
+     -> @ComponentScan (to scan all the beans in the base package)
+         base package means at where then runner class is there
+     -> @Configuration 
+        To create the beans we have Java class with some annotaions
+    
+@Component
+    -> To make the class as Spring bean we need @Component 
+
+@RestController
+@Service
+@Repository
+======================================================
+AnnotationConfigReactiveWebServerApplicationContext
+AnnotationConfigApplicationContext
+AnnotationConfigServletWebServerApplicationContext
+========================================================
+What are different scopes in SpringBoot
+
+@Singleton:
+  Eager loading
+  only one Instance created per IOC container
+@Prototype
+  Lazy loading
+  When ever required multiple instances will be created
+
+@Request
+@Session
+===========================================
+Spring vs SpringBoot
+run method
+Steps in run method
+how to fetch bean from run method
+different classes starting the IOC container
+@SpringBootApplication
+Component scanning
+configuring multiple base packages
+@scopes
+=============================================

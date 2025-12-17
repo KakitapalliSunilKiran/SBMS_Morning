@@ -1,0 +1,34 @@
+How to create Maven Application:
+===============================
+We have to download apache maven
+setup home path , and bin path
+mvn --version
+
+In Eclipse:
+===========
+File -> New Maven project -> Skip the Archetype -> Finish
+
+We are placing dependencies 
+then Maven download from the central repository 
+then we will get one folder extra
+Maven dependencies
+========================================
+src/main/java - > we can keep all source code files 
+src/main/resources -> We can keep all configuration files here
+src/test/java -> we can write junit fileds
+pom.xml -> We can mention all the dependencies here 
+==========================================
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="ref1" class="carapp.DieselEngine"></bean>
+    <bean id="ref2" class="carapp.PetrolEngine"></bean>
+     <bean id="ref3" class="carapp.Car"></bean>
+    
+
+</beans>
+

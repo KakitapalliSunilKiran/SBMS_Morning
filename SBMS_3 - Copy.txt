@@ -1,0 +1,57 @@
+Why JDBC is outdated:
+=====================
+1. Boiler Plate code
+2. Loose coupling from DB side 
+==================================
+
+Advantages of Microsoft :
+We can that particular service alone which are getting high traffic
+Maintenance is easy
+Application failures are less ,
+deployment of single service alone 
+Avoid Single point of Failure 
+===================================
+Struts and Hibernate become overidden or outdated
+
+Struts was given Apace maven -> it is replacement of Servlets
+Controller layer out of Struts 
+
+Hibernate also out dated because of that
+Hibernate -> Red hat 
+Persistence layer 
+Spring framework is replaced both 
+========================================
+Presentation layer :
+    it might be Front end screen
+    Hitting request from thr browser
+    Postman/Hopp scotch
+    Swagger 
+    Angular/React
+
+it starting layer of Spring Boot Application 
+JSP-> Angular/React
+========================================
+
+Controller layer :
+==================
+It is entry point of Backend Application
+What ever requests coming from Presentation layer it will be intrecepted
+at controller layer 
+Earlier this controller layer developed with
+Servlet-> Struts -> Spring 
+We use annotations to capture the incoming requests
+
+Service layer :
+====================
+Auth logic
+Fetching details
+3rd party API 
+We can write business logic with the Service layer
+
+DAO layer or repo layer :
+========================= 
+spring data jpa 
+we will just call method we fetch the data 
+Earlier it is with Hibernate -> Spring boot 
+=========================================
+

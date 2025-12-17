@@ -1,0 +1,17 @@
+package com.example.threelayers.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class Entrypoint {
+	
+	//There are 4 Http Methods 
+	//@GetMapping
+	//@PostMapping
+	//@PutMapping
+	//@deleteMapping
+	
+	public String greetMsg() {
+		return "Welcome to Durgasoft";
+	}
+}

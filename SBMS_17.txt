@@ -1,0 +1,32 @@
+
+
+Different types of Autowiring:
+=============================
+Field Injection: 
+================
+   Advantages: 
+      Simple and easy to use
+    Disadvantages:
+       * Basically  the reference variables in the target class will 
+       be scanned by reflection Api , so it wont obey OOPS principals
+       eg(it is inject bean into private field)
+      *it wont allow the final fields 
+
+Setter Injection:
+=================
+   Advantages:
+        it follows the principle of OOPS 
+        we can override the injected bean at some point of time
+    Disadvantages:
+       final field are not supported
+
+Constructor Injection :
+=======================
+   Advantages:
+      it supports final fields
+      Autowired annotaion is Optional
+      if there are 2 parametrized constructor Autowired is mandatory
+      Construvtot Inject and Setter Injection (Setter will be priority)
+      Constructor injection is Quicker than Setter Injection
+=====================================================================
+

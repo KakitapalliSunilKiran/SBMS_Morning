@@ -1,0 +1,10 @@
+When the framework is started
+or the Spring Boot Application is started
+
+it will scan for all the component classes
+It will create the bean(Object) for those component classes 
+
+in the target class there are some reference variable 
+who are having @Autowired annotation 
+frame work will scan such type of Variables having
+@Autowired annotations with Reflection Api 

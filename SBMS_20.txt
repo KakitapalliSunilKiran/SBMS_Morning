@@ -1,0 +1,46 @@
+Three tier architecture
+JPA concept(very less)
+======================
+MySQL
+H2 DB
+Oracle DB
+Postgres table
+============
+JPA in depth 
+============
+
+
+you have developed an end point called cricbuzz.com 
+===================================================
+Postman
+Hoppscotch
+browser
+Angular/react code 
+===================================================
+Just controller layer is entry point 
+it will get request (input) from the client 
+it is not mandatory
+this layer is responsible to invoke service layer 
+we will write the business logic 
+===================================================
+Service layer:
+=============
+display the score
+display bowling ststa
+display the batting stats 
+Based on the input the service layer will call the 
+database logic 
+service layer duty is What 
+it will return to Frontend in logical format 
+==========================================================
+Repository layer(DAO layer) :
+=============================
+it is responsible to connect and communicate with Database 
+here we will create an interface which will implement JPA Repository
+interface StudentRepo extends JpaRepository<Student,Integer>
+{
+
+}
+==========================================================
+develop Service layer and Integrate with controller layer 
+======================================================

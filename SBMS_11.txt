@@ -1,0 +1,48 @@
+Spring core :
+==========================================
+JDBC is getting ouitdated
+Struts and Hibernate become outdated
+Importance of Spring Suite
+Layered Architecture
+Spring modules (9 modules)
+Adavanatges and Disadavantages of Microservcies
+Strategy design pattern
+started with Core java
+I have explain Car App , Payment App
+maven 
+After creation i have explained what each file will
+Then  i explained How to create bean
+different types of bean injections from beans.xml file
+Dependency Injection types 
+Manual Injection 
+Autowired Injection
+============================================
+
+in Spring boot we dont register individual beans
+in Spring boot no need to attach any server to run any application
+automatically our application will deployed on the Tomcat Server 
+in Spring Boot no need to mention about dependency Injection 
+========================================================
+What is the Major Break through of Spring:
+   Dependency Injection is the Major Break through of Spring 
+   There is no support of any In memory database
+   Here we need to attach the Tomcat server 
+   There is no Actuator concept
+   there is no Dependency resolution in Spring core  
+
+What is the major Break through of Spring Boot:
+   Autoconfiguration is the Major break through 
+   There is support of Inmemory database 
+   Tomcat server is automatically appended
+   Actuator support is there 
+   There is Dependency resolution(Automatically all dependencies will follow the parent 
+   version of Spring they will download respective Jar files accordingly)
+=====================================================================
+
+
+
+
+
+
+
+

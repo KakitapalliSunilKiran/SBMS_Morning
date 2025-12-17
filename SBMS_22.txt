@@ -1,0 +1,28 @@
+Controller layer we need @RestController
+Service layer we need @Service
+Repository(DAO layer) we need @Repository
+
+What is the Parent of these 3 annotations
+@Componenet
+
+Which interface we need to extend in Repository layer 
+we should extend JpaRepository<Model,PrimaryKey Datatype>
+interface repo1 extends JpaRepository<Model,PrimaryKey Datatype>
+{
+    
+}
+
+if we go for class we need to give body for all the abstract methods
+that are there in JpaRepository
+JpaRepository is responsible for creating child class 
+JpaRepository is responsible to body for methods of child class
+JpaRepository is responsible to create an object for child class
+it is responsible to inject into taget class reference variable
+JpaRepository is following the Proxy Designpattern
+===========================================================
+How to capture the request body from the post man 
+=======================================================
+What is the annotation @RequestBody 
+===========================================
+
+

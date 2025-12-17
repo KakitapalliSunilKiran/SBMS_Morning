@@ -1,0 +1,10 @@
+package com.example.threelayers.repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.example.threelayers.model.Student;
+
+public interface RepoInfo extends JpaRepository<Student,Integer>
+{
+	
+}

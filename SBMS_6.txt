@@ -1,0 +1,53 @@
+What is a Dependency Injection :
+       Injecting a respective Dependent object(bean) into target class reference 
+       variable is called Dependency Injection
+
+       These are of 3 Tyepes
+          1. Constructor Injection
+          2. Field Injection
+          3. Setter Injection 	    
+
+        1. Constructor Injection:
+            PaymentEntry pe1 = new PaymentEntry();
+            PaymentEntry pe = new PaymentEntry(new CreditCard());
+            pe.makePayment();
+            This is an Example of constructor Dependency Injection
+            In Spring core  and Spring Boot no need use above line 
+        2. Setter Injection 
+            PaymentEntry pe = new PaymentEntry();
+            pe.setPay(new DebitCard());
+            //PaymentEntry pe = new PaymentEntry(new CreditCard());
+            pe.makePayment();
+
+            Keypoint in setter injection :
+            In the process of Injecting the bean via setter method 
+            IOC container will create default constructor 
+            it will executr the one if it is already there 
+        3. field Injection 
+            pe.pay=new CreditCard();
+		    pe.makePayment();
+
+        In enterprise level Constructor Injection is preferred
+
+Bean : 
+   Bean is something a java object , created by IOC container , managed by IOC container
+   Destroyed by IOC container 
+
+   it is an output IOC container which is being fed by Java classes and configuration
+   file
+
+IOC container :
+     it is the container holding all the beans 
+
+Spring core configuration file(beans.xml) is required but in Spring Boot 
+which is not required 
+
+What is maven 
+What it will do 
+
+
+
+=================================================================
+        
+
+

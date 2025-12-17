@@ -1,0 +1,21 @@
+Bean Life cycle
+=================
+Bean is an Object created by IOC container 
+
+1. Application Start 
+2. start IOC container 
+3. Bean creation 
+4. Injecting the beans
+5. @Postconstruct
+6. Using the bean 
+7. @Predestroy
+8. Destroying the bean 
+
+I am in car class comstrcutor
+Car object class hascode is1706939736
+We are in Diesel Engine Constructor455036946
+de hashcode in Car object class hascode is455036946
+I am in car1 class comstrcutor
+Car1 object class hascode is1254649194
+We are in Diesel Engine Constructor1032867484
+de hashcode in Car1 object class hascode is1032867484

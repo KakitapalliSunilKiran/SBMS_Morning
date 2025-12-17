@@ -1,0 +1,23 @@
+class 1:
+    pre requisite
+    Syllabus
+    Why JDBC is outdated
+    differences between Microservcies and monolith
+
+class 2:
+    pl vs technology vs framework
+    struts and Hibernate become overidden
+
+class 3:
+   Layered Architecture
+   Highlevel overview of each and every module of Spring
+
+class 4:
+   Spring framework remaining modules
+   strategy design pattern
+
+strategy design pattern :
+   1. has a relationship preferred over is a relationship
+   2. Communication should happen via interfaces
+   3. Open for extention and closed for modification
+   

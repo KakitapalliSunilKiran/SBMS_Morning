@@ -1,0 +1,11 @@
+We have done with H2 Database
+Today will go with Mysql 
+for the same application 
+
+2 dependencies :
+    spring-data-Jpa 
+    h2 driver Dependency
+============================================
+2 dependencies(My SQL):
+   Spring-data-Jpa
+   mysql-connector-j

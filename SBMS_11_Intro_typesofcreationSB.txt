@@ -1,0 +1,35 @@
+So any idea how to create a Spring Boot application:
+=====================================================
+Using Spring Initializer:
+    goto start.spring.io
+    After giving all the configuration 
+    click on download
+    respsective zip file will be downloaded 
+    extract the zip file 
+    in the eclipse 
+click on Import Maven project -> existing maven project -> browse ->Select directory
+   src/main/java -> it contains source code
+   src/main/resources -> it contains properties file
+                        those contains db credentials , cloud credentials 
+    src/test/java -> it contains Junit and Mockito test files
+
+
+
+
+Eclispse Id:
+    By default Spring Starter wont be available
+    go to Help -> Eclispse Market place -> Search for Spring Tool Suite -> Click on Install
+    Ide ask for restart , after restart you can find an option called
+    spring tool suite
+STS:
+
+Maven and Gradle both are build tools which will help to
+download dependencies from central repository(MVN repository) to class path
+====================================================================
+
+@EnableAutoConfiguration : Automatically enable auto configuration property
+@ComponentScan : framework will automatically scan base package and subpackages for the bean class
+@SpringBootConfiguration: Java classes will be configured as beans that will be taken 
+                          care by this annotation 
+
+

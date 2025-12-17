@@ -1,0 +1,39 @@
+We have what are differemt types of Bean scopes :
+==================================================
+1. Singleton
+   It create one instance per IOC container
+   It is eagerly loading
+   Bean will be created at the start of the IOC container
+
+2. Prototype
+   When ever required a new bean will be created 
+   it follows the principle of Lazy loading
+3. Request 
+
+4. Session
+==================================================
+Types of Dependency Injection
+   1. manual wiring
+      -by name
+         internally byName is using setter methods to invoke setter methods 
+        it will create a default object , with that default object it will invke 
+        setter methods
+
+      -by type
+         internally it also setters to inject the respective beans
+         it will create a default object , with that default object it will invke 
+        setter methods
+
+        in byType there is a high chance of getting Ambiguity issue 
+        so in those cases we have primary , and autowire-candadate="false"
+
+      -constructor -
+         constructor internally follows byType
+         here param constructor will be executed
+      -no 
+        we are disaling the autowiring
+   2. autowiring
+      -field injection
+      -constructor Inject
+      -setter injection
+
