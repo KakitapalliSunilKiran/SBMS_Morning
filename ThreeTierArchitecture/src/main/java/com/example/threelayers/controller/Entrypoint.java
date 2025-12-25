@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.threelayers.exceptions.RecordNotFound;
 import com.example.threelayers.model.Student;
 import com.example.threelayers.service.BusinessLayer;
 
@@ -46,14 +47,14 @@ public class Entrypoint {
 //	}
 	
 	@GetMapping("/fetch/{id}")
-	public ResponseEntity<Student> getStudent(@PathVariable int id) {
+	public ResponseEntity<Student> getStudent(@PathVariable int id) throws RecordNotFound {
 
 	    Optional<Student> student = businessLayer.getStudent(id);
 
 	    if (student.isPresent()) {
 	        return ResponseEntity.ok(student.get());   // 200 OK
 	    } else {
-	        return ResponseEntity.notFound().build();  // 404 Not Found
+	       throw new RecordNotFound("please give valid id..id not found"+id); // 404 Not Found
 	    }
 	}
 	

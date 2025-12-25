@@ -1,0 +1,27 @@
+Custom Exception Handlin
+there in Core Java 
+we will Exception
+
+AgeNotFoundException..............
+..............................
+..............................
+
+This will make your program to stop abruptly 
+in Spring boot APi 
+can the front end developer
+{
+    code:404
+    message: "the particular record not found"
+    timestamp:
+}
+
+What are the steps we should take to make exception into custom 
+json 
+Have class annotated with @ControllerAdvice
+this class having multiple methods having annotated 
+@ExceptionHandler(AgeNotFoundException.class)
+public ExceptionObject getJsonException(){
+    return 
+}
+
+

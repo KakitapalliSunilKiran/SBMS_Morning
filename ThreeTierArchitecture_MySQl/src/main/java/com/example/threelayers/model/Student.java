@@ -7,14 +7,22 @@ import jakarta.persistence.Id;
 public class Student {
 	
 	@Id
-	int id;
+	Integer id; //0
 	String name;
-	String lname;
-	String clgName;
-	public int getId() {
+	String lname; //null
+	String clgName; //null
+	String email; //null
+	
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public Integer getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	public String getName() {

@@ -1,5 +1,6 @@
 package com.example.threelayers.controller;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,6 +53,51 @@ public class Entrypoint {
 	public Optional<Student> getStudent(@PathVariable("id") int id) {
 		return businessLayer.getStudent(id);
 	}
+	
+	@GetMapping("/fetchemail/{email}")
+	public List<Student> getStudent(@PathVariable("email") String email) {
+		return businessLayer.findByEmail(email);
+	}
+	
+	@GetMapping("/fetchcriteria/{name}/{clgName}")
+	public List<Student> getStudentCriteria(@PathVariable("name") String name,@PathVariable("clgName") String clgName) {
+		return businessLayer.getStudentsByNameCriteria(name,clgName);
+	}
+
+	
+	@GetMapping("/fetchemailnative/{email}")
+	public List<Student> getStudentNative(@PathVariable("email") String email) {
+		return businessLayer.findByEmailNative(email);
+	}
+	
+	@GetMapping("/fetchemailexample/{email}")
+	public List<Student> getStudentExample(@PathVariable("email") String email) {
+		return businessLayer.findByEmailExample(email);
+	}
+	
+	@GetMapping("/fetchpages/{no}/{size}")
+	public List<Student> getStudentPaging(@PathVariable("no") Integer no,@PathVariable("size") Integer size) {
+		return businessLayer.findByEmailPaging(no,size);
+	}
+	
+//	@GetMapping("/fetchemailnative/{email}")
+//	public List<Student> getStudentNative(@PathVariable("email") String email) {
+//		return businessLayer.findByEmailNative(email);
+//	}
+//	
+	
+	
+	
+	@GetMapping("/fetchemailandlname/{email}/{lname}")
+	public List<Student> getStudent(@PathVariable("email") String email,@PathVariable("lname") String lname) {
+		return businessLayer.findByEmailAndLname(email,lname);
+	}
+	
+	@PutMapping("/updateclg/{old}/{new}")
+	public void updateclg(@PathVariable("old") String oldClg,@PathVariable("new") String newClg) {
+		 businessLayer.updateClgName(oldClg,newClg);
+	}
+	
 	
 	@PutMapping("update/{id}/{clgName}")
 	public void updateStudent(@PathVariable("id") int id,@PathVariable("clgName") String clgName) {

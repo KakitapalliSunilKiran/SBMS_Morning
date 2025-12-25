@@ -1,0 +1,60 @@
+in JPA HOw many ways of connecting to Database:
+
+1. Predefined methods
+   13 methods
+2. Derived methods 
+3. Query
+4. Native Query
+5. Example api
+6. criteria builder
+=================================
+Predefined methods : (demerits of predefined method)
+if we want to search by custom fileds
+if we want to search by multiple fields we cant 
+join operations we cant do that
+
+derived methods: (demerits of derived methods)
+Join conditions 
+if there are more fields very
+save operations
+
+@Query or Jpql query:
+
+Native Query means raw sql 
+===========================================
+ARTS college
+
+I want update the data 
+Alpha -> Arts clg 
+===========================================
+
+@Transactional
+@Modifying
+@Query
+
+it will search based on non null 
+int id =0 
+string
+string 
+
+id=0  && mail=sunil@gmail.com
+=============================================
+Pagenation 
+6/2=3
+1,2
+
+pagenumber , pagesize
+0, 2
+
+1,2
+
+2,2
+
+130, 131 -Page 0
+133 134 - Page 1
+138 139 - page 2
+==============================================
+
+
+
+

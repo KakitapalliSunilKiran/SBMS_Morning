@@ -1,0 +1,48 @@
+Spring core:
+    with out spring using starategy design pattern
+    with spring (3 inject)
+    beans.xml
+    how we can inject
+    byName , byType , Constructor ,no 
+Spring Boot :
+     base packages
+     different annotations
+     3 tier architectire
+     H2db , My Sql Db
+     JPA concepts 
+Spring data JPA
+Transaction Management
+Spring security
+Microservices
+=====================================================================
+What is data jpa all about
+==========================
+data jpa is all about connecting Database 
+there should be some one who can communicate with Database
+data jpa will be acting like intermediator between Spring boot and DB 
+=======================================================================
+
+How many ways of connecting to Database
+   //predefined methods - save , saveAll , findAll , findById
+	//Derived Methods
+	//Query
+	//Native Query
+	//Example
+	//criteria api
+=======================================================================
+Most of the web application
+they will ask you to enter username and password
+while hitting the login button what will happen
+sunil@gmail.com
+there is a requirement we need based first name 
+20 files
+
+fname= khan study = btech
+
+findByFnameAndStudy
+
+we need to customize the derived methods
+we need to place those derived methods in the repository  layer
+
+
+

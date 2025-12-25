@@ -1,0 +1,14 @@
+Native Query :
+Basically we should write Queries in raw SQL 
+Query vs Native Query 
+
+which one performance Queries 
+
+JPQL :- SQL dialec JPQL to Native 
+
+code effiecient JPQL Query betas the race 
+
+NativeQuery=true 
+
+
+
