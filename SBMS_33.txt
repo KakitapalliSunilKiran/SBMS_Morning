@@ -1,0 +1,9 @@
+id  name  email  lname    aid   street statw country
+
+1   aa    gm    hj        1    
+1   bb    gn1    y        2   
+
+1     alpha  Andhra   india
+2     alpha  Andhra   india
+
+One to One Unidirectional mapping 

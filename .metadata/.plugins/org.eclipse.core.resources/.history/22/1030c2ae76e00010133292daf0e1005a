@@ -1,0 +1,71 @@
+package com.example.threelayers.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
+import org.springframework.stereotype.Service;
+
+import com.example.threelayers.model.Student;
+import com.example.threelayers.repo.RepoInfo;
+
+@Service
+public class BusinessLayer {
+	
+	@Autowired
+	RepoInfo ri;
+	
+     public void storeToDb(Student s) { 
+    	 ri.save(s);
+     }
+     
+     public Optional<Student> getStudent(int id) {
+    	 return ri.findById(id);
+     }
+     
+     public void updateStudent(int id,String clgName) {
+ 		Optional<Student> s = ri.findById(id);
+ 		if(s.isPresent()) {
+ 			s.get().setClgName(clgName);
+ 			ri.save(s.get());
+ 		}
+ 		
+ 	}
+     
+     public void deleteMapping(int id) {
+    	 ri.deleteById(id);
+     }
+     
+     public List<Student> findByEmail(String email) {
+    	 return ri.findByEmail(email);
+     }
+     
+     public List<Student> findByEmailNative(String email) {
+    	 return ri.findByEmailNative(email);
+     }
+     
+     public List<Student> findByEmailExample(String email) {
+    	 Student student = new Student();
+    		student.setEmail(email);
+
+    		Example<Student> example = Example.of(student);
+
+    		List<Student> students = ri.findAll(example);
+
+    		return students;
+     }
+     
+     public List<Student> findByEmailAndLname(String email,String lname) {
+    	 return ri.findByEmailAndLname(email,lname);
+     }
+     
+     public void updateClgName(String newclg, String oldClg) {
+    	 ri.updateClgName("Arts clg", "Alpaha clg");
+     }
+     
+     
+     //getmethod
+     //update the row
+     //save method
+}

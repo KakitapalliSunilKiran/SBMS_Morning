@@ -1,0 +1,37 @@
+In last we have seen one to one Unidirectional 
+Today will see cascading types , fetch types 
+
+default fetch type is eager loading 
+
+lazy loading means what child is not expected print 
+@JsonIgnore
+this configuration is not 
+
+
+
+org.hibernate.ObjectNotFoundException: No row with the given identifier exists for entity [com.example.demo.model.UserAddress with id '500']
+	at org.hibernate.jpa.internal.JpaEntityNotFoundDelegate.handleEntityNotFound(JpaEntityNotFoundDelegate.java:20) ~[hibernate-core-7.1.8.Final.jar:7.1.8.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.load(DefaultLoadEventListener.java:209) ~[hibernate-core-7.1.8.Final.jar:7.1.8.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadWithRegularProxy(DefaultLoadEventListener.java:284) ~[hibernate-core-7.1.8.Final.jar:7.1.8.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.proxyOrLoad(DefaultLoadEventListener.java:236) ~[hibernate-core-7.1.8.Final.jar:7.1.8.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.doOnLoad(DefaultLoadEventListener.java:109) ~[hibernate-core-7.1.8.Final.jar:7.1.8.Final]
+	at org.hibernat
+
+
+{
+   "id":400,
+  "name": "Karthik",
+  "email": "sunil@yahoo.com",
+  "phone": "9876543210",
+  "userAddress":{
+      "aid":200,
+    "city": "Hyderabad",
+    "country": "India"
+  }
+}
+
+Persist will think child entity is already present it will try to fetch that entity 
+
+Persist wont update child , it will update only parent despite it will 
+create new record in child table with null values 
+

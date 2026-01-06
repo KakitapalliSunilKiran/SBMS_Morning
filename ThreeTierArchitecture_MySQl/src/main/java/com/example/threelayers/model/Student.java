@@ -1,13 +1,22 @@
 package com.example.threelayers.model;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 //Where is the Data source is  configure
 @Entity
 public class Student {
 	
 	@Id
-	Integer id; //0
+	@GenericGenerator(
+            name = "emp_id_gen",
+            strategy = "com.example.threelayers.service.CustomIdGenerator"
+    )
+	@GeneratedValue(generator = "emp_id_gen")
+	String id; //0
 	String name;
 	String lname; //null
 	String clgName; //null
@@ -19,10 +28,10 @@ public class Student {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public Integer getId() {
+	public String getId() {
 		return id;
 	}
-	public void setId(Integer id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	public String getName() {

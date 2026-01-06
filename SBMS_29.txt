@@ -1,0 +1,17 @@
+Sequence id is incremnetes by 50
+that means what 50 ids are generated in Student table 
+insert the next_id in the table 
+====================================
+
+identity : Sequence has not created
+Auto : Student_Seq (100)
+Sequence: Student_Seq(100) 
+table : Hibernate_seq (100 start from 50)
+UUID : ids will be generated in form of strings 
+==============================================
+
+TCS-001
+TCS-002
+
+How to create a custom identity generators
+========================================

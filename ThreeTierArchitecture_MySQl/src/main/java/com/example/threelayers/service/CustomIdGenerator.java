@@ -1,0 +1,40 @@
+package com.example.threelayers.service;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import org.hibernate.engine.spi.SharedSessionContractImplementor;
+import org.hibernate.id.IdentifierGenerator;
+
+public class CustomIdGenerator implements IdentifierGenerator  {
+
+	@Override
+	public Object generate(SharedSessionContractImplementor session, Object object) {
+		String[] generatedId = new String[1];
+
+		session.doWork(connection -> {
+		    try (Statement stmt = connection.createStatement();
+		         ResultSet rs = stmt.executeQuery(
+		             "SELECT id FROM student ORDER BY id DESC LIMIT 1")) {
+
+		        String prefix = "EMP";
+		        int nextId = 1;
+
+		        if (rs.next()) {
+		            String lastId = rs.getString(1); // EMP005
+		            nextId = Integer.parseInt(lastId.substring(3)) + 1;
+		        }
+
+		        generatedId[0] = prefix + String.format("%03d", nextId);
+
+		    } catch (Exception e) {
+		        e.printStackTrace();
+		    }
+		});
+
+		return generatedId[0];
+
+	}
+
+}

@@ -1,0 +1,26 @@
+What is transaction management:
+================================
+a transaction management is the one which obeys ACID Properties
+
+A : A stands for Atomicity , a transaction is said to be either 0 or 1 
+
+   10 steps( 9 out of 10 its 0)
+           (10 out of 10 its 1)
+
+C : Consistency
+    I am transferring 200 rs pankaj 
+    500 rs :300 in my account 
+    700 rs : 900 
+    Consistency is mainly applicable 
+
+I : Isolation 
+    always 2 transactions are isolated 
+    sequential transactions will happen 
+   
+
+D : Durablity 
+   What ever the situation is the persisted data is expected to be there 
+==============================================================================
+the flow is said to be a transaction when it obeys all the 4 principals 
+==============================================================================
+
